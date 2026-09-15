@@ -1,14 +1,16 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/core/constants/api_keys.dart';
+import 'package:flutter_application_1/features/weather/data/models/weather_model.dart';
+import 'package:flutter_application_1/features/weather/domain/entities/weather_entity.dart';
 
-import '../../APIs/weather_api.dart';
-import '../Models/weather_model.dart';
+
 import 'package:http/http.dart' as http ;
 
 class Weatherservice {
 
-  Future<WeatherModel> getWeather({required String city})async{
+  Future<WeatherEntity> getWeather({required String city})async{
     final url = Uri.parse('https://api.weatherapi.com/v1/current.json?key=${ApiKeys.weatherApiKey}&q=$city&aqi=no');
     final response = await http.get(url);
 

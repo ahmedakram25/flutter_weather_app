@@ -1,15 +1,13 @@
 import 'package:flutter/foundation.dart';
+import 'package:flutter_application_1/features/weather/domain/entities/weather_entity.dart';
 
-class WeatherModel {
-  String? city, weatherCondition;
-  double? temp;
-
+class WeatherModel extends WeatherEntity {
   WeatherModel({
-    required this.city,
-    required this.temp,
-    required this.weatherCondition,
+    super.city,
+    super.temp,
+    super.weatherCondition
   });
-
+  
   factory WeatherModel.fromJson(Map<String, dynamic> json) {
     final weather = WeatherModel(
       city: json['location']['name']?.toString(),
@@ -19,7 +17,6 @@ class WeatherModel {
 
     debugPrint("weather condition: ${weather.weatherCondition}, temp: ${weather.temp}, city: ${weather.city}");
     
-
     return weather;
   }
-}
+  }

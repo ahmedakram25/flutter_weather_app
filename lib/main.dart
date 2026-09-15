@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/HomeScreen.dart';
-import 'package:flutter_application_1/Mangers/weather_notifier.dart';
+import 'package:flutter_application_1/features/weather/presentation/screens/home_screen.dart';
+import 'package:flutter_application_1/features/weather/presentation/manager/weather_notifier.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 

@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import '../../Models/weather_model.dart';
-import '../../Services/weatherService.dart';
+import 'package:flutter_application_1/features/weather/data/data_source/weather_service.dart';
+import '../../domain/entities/weather_entity.dart';
+
 
 class WeatherNotifier extends ChangeNotifier {
-  WeatherModel? weatherModel;
+  WeatherEntity? weatherModel;
 
   Future<void> featchWeather({required String city}) async {
     weatherModel = await Weatherservice().getWeather(city: city);

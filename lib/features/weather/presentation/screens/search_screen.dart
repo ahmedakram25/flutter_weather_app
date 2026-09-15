@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:flutter_application_1/Mangers/weather_notifier.dart';
+import 'package:flutter_application_1/features/weather/presentation/manager/weather_notifier.dart';
 
 class SecondScreen extends StatefulWidget {
   const SecondScreen({super.key});
